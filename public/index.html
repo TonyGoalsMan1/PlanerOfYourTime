@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planner Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">Planner</div>
+      <div class="pill" id="proBadge">FREE</div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="tasks" class="active">Задачи</button>
+      <button data-tab="habits">Привычки</button>
+      <button data-tab="goals">Цели</button>
+      <button data-tab="pro">PRO</button>
+    </nav>
+
+    <section id="tasks" class="tab active">
+      <div class="row">
+        <input id="taskInput" placeholder="Новая задача..." />
+        <button id="addTask">Добавить</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section id="habits" class="tab">
+      <div class="row">
+        <input id="habitInput" placeholder="Новая привычка..." />
+        <button id="addHabit">Добавить</button>
+      </div>
+      <ul id="habitList"></ul>
+    </section>
+
+    <section id="goals" class="tab">
+      <div class="row">
+        <input id="goalInput" placeholder="Новая цель..." />
+        <input id="goalTarget" type="number" placeholder="Цель (100)" />
+        <button id="addGoal">Добавить</button>
+      </div>
+      <ul id="goalList"></ul>
+    </section>
+
+    <section id="pro" class="tab">
+      <div class="card">
+        <h3>PRO-подписка</h3>
+        <p>Аналитика, неограниченные цели, темы и другое.</p>
+        <button id="buyPro">Оформить за 499⭐</button>
+        <small>Платёж через Telegram Stars</small>
+      </div>
+      <div class="card" id="motivation">
+        <h3>Мотивация дня</h3>
+        <blockquote id="quote"></blockquote>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Planner Mini App</title>
+
+  <!-- SDK Telegram Web Apps (должен быть ПЕРЕД app.js) -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -60,6 +63,7 @@
     </section>
   </div>
 
+  <!-- наш код (в конце body, чтобы DOM уже был) -->
   <script src="/app.js"></script>
 </body>
 </html>
